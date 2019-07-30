@@ -1,6 +1,3 @@
-# need to write unit tests for both prime algorithms
-# check edge cases (int, str, float, zero, negative, first 100 primes, first 100 non primes)
-
 from decimal import *
 import timeit
 from basicPrime import basicPrime

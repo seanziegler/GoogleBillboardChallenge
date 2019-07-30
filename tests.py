@@ -3,8 +3,6 @@ from basicPrime import basicPrime
 
 class TestPrimeMethods(unittest.TestCase):
 
-
-
     def test_basicPrimesWithComposities(self):
         firstComposites = [4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 33, 34, 35, 36]
         for composite in firstComposites:
@@ -18,7 +16,7 @@ class TestPrimeMethods(unittest.TestCase):
         with self.assertRaises(ValueError):
             basicPrime(2)
 
-    def test_basicPrimeWithString(self):
+    def test_basicPrimeWithNonInt(self):
         with self.assertRaises(TypeError):
             basicPrime('test')
 
