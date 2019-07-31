@@ -1,19 +1,23 @@
 import math
 import random
-from fractions import gcd
 
 def fermatPrime(n):
-    tests = [random.randint(2,10) for i in range(5)]
+    if n <= 2:
+        raise ValueError
+    if not type(n) == int:
+        raise TypeError
+    tests = [2,4,6,8,9]
     prime = True
 
+
     for a in tests:
-        print(a,n)
-        x = gcd(a,n) == 1 # why
-        y = (a**n - 1) % n == 1
-        print('n: %s A: %s GCD: %s Fermat: %s' % (n, a, x, y))
+
+        x = math.gcd(a,n) == 1 # why
+        y = pow(a, n-1, n) == 1
         if not x or not y:
             prime = False
             break
+        print(a,n,prime)
     if prime:
         print('%s is the first 10 digit prime in e.' % n)
 
