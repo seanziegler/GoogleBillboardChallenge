@@ -3,4 +3,4 @@ python:
   - "3.6"      # current detault Python on Travis CI
 # command to run tests
 script:
-  - tests.py
+  - python tests.py
